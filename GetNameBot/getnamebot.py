@@ -4,7 +4,7 @@ print("Bot ishga tushyapti...")
 def ism_manosi(userIsmi):
 	ismList = []
 	manoList = []
-	with open('D://TEST/mano.txt','r' , encoding='utf8') as file: 
+	with open('mano.txt','r' , encoding='utf8') as file: 
 			for line in file:
 				ismList.append(line.split(None, 1)[0]) # add only first word
 				rest = line.split(' ', 1)[1]
@@ -31,7 +31,7 @@ def handle_message(update,context):
 		update.message.reply_text(natija)
 
 def main():
-    updater = Updater("1654001742:AAF7bqNIqvnUQZrE1c7hF9gqyJ-vvfGcNwU",use_context=True)
+    updater = Updater("",use_context=True)
     dp = updater.dispatcher
     dp.add_handler(CommandHandler('start', start))
     dp.add_handler(CommandHandler('help', help))
